@@ -43,5 +43,10 @@ if __name__ == "__main__":
                 print('Error: login or password incorrect')
 
     while 1:
-        http.get('https://www.weblancer.net')
-        time.sleep(270)
+        try:
+            http.get('https://www.weblancer.net')
+        except requests.exceptions.RequestException:
+            time.sleep(3)
+            continue
+
+        time.sleep(270)   # Wait for ~5 min
