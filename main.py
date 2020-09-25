@@ -30,7 +30,7 @@ if __name__ == "__main__":
         with open(SESSION_FILE, 'rb') as f:
             http = pickle.load(f)
     except FileNotFoundError:
-        print('Please provide Weblance.net credentials')
+        print('Please provide Weblancer.net credentials')
         while 1:
             login = input('Login: ')
             password = input('Password: ')
